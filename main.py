@@ -19,6 +19,18 @@ class Pet():
             self.boredom = 9
         print(f"{self.name} has been entertained.\nUpdated Boredom: {self.boredom}")
 
+    def sleep(self):
+        self.sleepiness -= 5
+        if self.sleepiness < 0:
+            self.sleepiness = 9
+        print(f"{self.name} has slept.\nUpdated Sleepiness: {self.sleepiness}")
+
+    def wait(self):
+        self.age = age + 1
+        if self.age < 0 or self.age > :
+            self.boredom = 9
+        print(f"{self.name} has been entertained.\nUpdated Boredom: {self.boredom}")
+
 ####----Task 1----####
 #Set up your pet with the following attributes:
 #name (make this mandatory), age (default:0), hunger (default: 5), boredom (default:3), sleepiness(default:3)
