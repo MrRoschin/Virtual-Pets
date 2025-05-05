@@ -50,4 +50,14 @@ print(f"Bobby's stats:\nAge: {age}\nHunger: {hunger}\nBoredom: {boredom}\nSleepi
     # ● Hunger is at 10
     # ● Age is at a random age between 15 and 20 or more
 
+
+####---Task 5----####
+#make it so that the feed, sleep, play and wait will check if the pet
+#is dead before you upadate those properties.
+
+####---Task 6----####
+#Use Python's predefined __str__ method to produce a string output
+#for your pet. refer to page 4 of the tutorial if you don't know
+#what I'm talking about.
+
 #Go to page 9 of the tutorial to learn how to make the mainline (https://classroom.google.com/w/NzE2NTQ0NzA2MTYx/t/all)
