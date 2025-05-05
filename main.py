@@ -1,13 +1,35 @@
 class Pet():
-    def __init__(self):
+    def __init__(self, name, age, hunger, boredom, sleepiness):
         self.dead = False
+        self.name = name
+        self.age = age
+        self.hunger = hunger
+        self.boredom = boredom
+        self.sleepiness = sleepiness
+
+    def feed(self):
+        self.hunger -= 3
+        if self.hunger < 0:
+            self.hunger = 0
+        print(f"{self.name} has been fed.\nUpdated Hunger: {self.hunger}")
+
+    def play(self):
+        self.boredom -= 3
+        if self.boredom < 0:
+            self.boredom = 9
+        print(f"{self.name} has been entertained.\nUpdated Boredom: {self.boredom}")
 
 ####----Task 1----####
 #Set up your pet with the following attributes:
 #name (make this mandatory), age (default:0), hunger (default: 5), boredom (default:3), sleepiness(default:3)
 
+age = 0; hunger = 5; boredom = 3; sleepiness = 3
+
 ####----Task 2----####
 #instantiate your pet object with the name of your choice
+
+Bobby = Pet("Bobby", age, hunger, boredom, sleepiness)
+print(f"Bobby's stats:\nAge: {age}\nHunger: {hunger}\nBoredom: {boredom}\nSleepiness: {sleepiness}")
 
 ####----Task 3----#### 
 # We need to add the following methods to our Virtual Pet:
