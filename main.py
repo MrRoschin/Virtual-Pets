@@ -1,11 +1,12 @@
 class Pet():
-    def __init__(self, name, age, hunger, boredom, sleepiness):
+    def __init__(self, name, age, hunger, boredom, sleepiness, dead):
         self.dead = False
         self.name = name
         self.age = age
         self.hunger = hunger
         self.boredom = boredom
         self.sleepiness = sleepiness
+        self._pet__dead = False
 
     def feed(self):
         self.hunger -= 3
@@ -26,22 +27,27 @@ class Pet():
         print(f"{self.name} has slept.\nUpdated Sleepiness: {self.sleepiness}")
 
     def wait(self):
-        self.age = age + 1
-        if self.age < 0 or self.age > :
-            self.boredom = 9
-        print(f"{self.name} has been entertained.\nUpdated Boredom: {self.boredom}")
+        if self._pet__dead:
+            print(f"{self.name} is dead and cannot wait.")
+            return
+        self.age += 1
+        self.hunger += 1
+        self.boredom += 1
+        self.sleepiness += 1
+        print(f"{self.name} has aged a year.\nUpdated Age: {self.age}\nUpdated Hunger: {self.hunger}\nUpdated Boredom: {self.boredom}\nUpdated Sleepiness: {self.sleepiness}")
+        self.check_death()
 
 ####----Task 1----####
 #Set up your pet with the following attributes:
 #name (make this mandatory), age (default:0), hunger (default: 5), boredom (default:3), sleepiness(default:3)
 
-age = 0; hunger = 5; boredom = 3; sleepiness = 3
+age = 0; hunger = 5; boredom = 3; sleepiness = 3; dead = 0
 
 ####----Task 2----####
 #instantiate your pet object with the name of your choice
 
-Bobby = Pet("Bobby", age, hunger, boredom, sleepiness)
-print(f"Bobby's stats:\nAge: {age}\nHunger: {hunger}\nBoredom: {boredom}\nSleepiness: {sleepiness}")
+Bobby = Pet("Bobby", age, hunger, boredom, sleepiness, dead)
+print(f"Bobby's stats\n-------------\nStatus: {'Dead' if dead else 'Alive'}\n\nAge: {age}\nHunger: {hunger}\nBoredom: {boredom}\nSleepiness: {sleepiness}")
 
 ####----Task 3----#### 
 # We need to add the following methods to our Virtual Pet:
