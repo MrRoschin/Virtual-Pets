@@ -62,6 +62,28 @@ pet1 = Pet(petname, age, hunger, boredom, sleepiness, dead)
 print(pet1)
 # Here just in case: print(f"{pet1}'s stats\n-------------\nStatus: {'Dead' if dead else 'Alive'}\n\nAge: {age}\nHunger: {hunger}\nBoredom: {boredom}\nSleepiness: {sleepiness}")
 
+choice = input("What would you like to do?\n- Feed\n- Play\n- Sleep\n- Wait\n\n")
+
+while choice != "":
+
+    if choice.lower() == "feed":
+        pet1.feed()
+
+    elif choice.lower() == "play":
+        pet1.play()
+
+    elif choice.lower() == "sleep":
+        pet1.sleep()
+
+    elif choice.lower() == "wait":
+        pet1.wait()
+
+    else: print("Your only options are to: Feed, Play, Sleep, or Wait. Choose a valid option.")
+
+    print("\n-----------------------------------------------------\n")
+    print(pet1)
+    print("-----------------------------------------------------\n")
+    choice = input("What would you like to do?\n- Feed\n- Play\n- Sleep\n- Wait\n\n")
 ####----Task 3----#### 
 # We need to add the following methods to our Virtual Pet:
 # 1. Feed - which will reduce hunger by 3
